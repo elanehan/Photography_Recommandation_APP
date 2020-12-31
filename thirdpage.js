@@ -50,7 +50,7 @@ class thirdpage extends React.Component {
       ceiling:0,
       floor:0,
       river:0,
-      select_G: 0,
+      select_G:0,
       select_N:0,
       select_S:0
     };
@@ -72,7 +72,7 @@ class thirdpage extends React.Component {
         <View>
           <ImageBackground
             style={styles.background}
-            source={require("./assets/background.png")}
+            source={require("./assets/background.jpg")}
           > 
               {/*upperline (back icon and search) */}
               <View style={{flexDirection : "row",marginTop : "4%",marginLeft : "4%"}}>
@@ -87,7 +87,7 @@ class thirdpage extends React.Component {
 
             {/********************/}
             {/*put your code here*/}  
-            <View style={{alignItems:'flex-start', justifyContent:'center'}}>
+            <View style={{alignItems:'center', justifyContent:'center'}}>
               <Text style={{fontSize:17, color:'#ccc'}}>    Choose the tags you want !</Text>
             </View>
  
@@ -172,8 +172,9 @@ class thirdpage extends React.Component {
             <View style={{marginLeft:'7%'}}>
               <Text style={styles.tital}>Scene</Text>
             </View>
-            <ScrollView 
-              horizontal={true}>
+
+            
+            <ScrollView style={{height:600/16*9}}>
             <View style={styles.bottom_container}>
               <TouchableOpacity onPress={() => 
               { if(this.state.select_S==0)
@@ -182,7 +183,7 @@ class thirdpage extends React.Component {
                 this.setState({road: 0,select_S: 0}) }}
                 style={[styles.button,{backgroundColor: this.state.road==0 ? '#ccc':'#ABDB8A'}]}>
                 <Text style={[styles.buttonText,{color:this.state.road==0?'#000':'white'}]}>
-                  road
+                  sss
                 </Text>
               </TouchableOpacity>
 
